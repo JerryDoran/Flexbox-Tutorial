@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+:root {
+  --main-white: white;
+  --main-green: #0f9;
+  --main-black: #444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--main-black);
+  font-size: 1.1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--main-green);
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  outline: 3px solid var(--main-white);
+  outline-offset: 0.25em;
+  display: inline-block;
+  margin: 0.25em 0 0.5em;
+}
+
+h1 span {
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5em;
+}
+
+p span,
+strong {
+  color: var(--main-green);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.7rem;
+  text-decoration: none;
+  background: var(--main-green);
+  color: var(--main-black);
+  font-weight: 600;
+  transition: all 0.5s ease-in;
+}
+
+.btn:hover {
+  /* can only be used with SAS */
+  /* background: darken(var(--main-green), 30%); */
+
+  background: rgb(55, 223, 153);
+}
+
+.hero {
+  background: #444;
+  background-image: url(https://images.unsplash.com/photo-1414476367528-f23f72691de0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  height: 100vh;
+  padding: 1rem;
+  color: var(--main-white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero p {
+  margin-bottom: 1rem;
+}
+
+.sales-points {
+  padding: 12vh 0;
+  text-align: center;
+
+  /* Parent container for .sales-items */
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.sales-point {
+  flex-basis: 30%;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  background-image: url(https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  padding: 10vh 0;
+  color: var(--main-white);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cta-text {
+  flex-basis: 100%;
+  padding: 0 2em;
+}
+
+@media (min-width: 40rem) {
+  .sales-points {
+    flex-direction: row;
+  }
+
+  .cta-text {
+    flex-basis: 50%;
+  }
+}
